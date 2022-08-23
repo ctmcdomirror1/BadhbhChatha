@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParticularEntActivity">
+
+    <android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
+        android:fitsSystemWindows="true" android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@+id/toolbar_layout"
+            android:fitsSystemWindows="true" android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/toolbar_holder"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+        android:id="@+id/image_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:name="com.example.cmcdona2.theresgoodboostonight.SocietyPicture"
+            android:id="@+id/myImgView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:layout_collapseMode="parallax"  />
+        <LinearLayout
+            android:id="@+id/buttonHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A0FFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/directions_btn"
+                android:text="@string/directions"
+                android:layout_gravity="center"
+                android:width="65dp"
+                android:id="@+id/getDirections"
+                />
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="25dp"
+                android:width="65dp"
+                android:src="@drawable/calendar_btn"
+                android:text="Notify"
+                android:layout_gravity="center"
+                android:id="@+id/going"
+                 />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:width="65dp"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/favourite_btn"
+                android:text="Notify"
+                android:layout_gravity="center"
+                android:id="@+id/fav"
+                />
+            </LinearLayout>
+            </LinearLayout>
+
+    </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/placeNameHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:transitionName="tNameHolder"
+                    android:layout_below="@id/image_holder">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/eventName"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@android:color/background_dark"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
+    </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+                android:fitsSystemWindows="true"
+                android:layout_height="80dp" android:layout_width="match_parent"
+                app:layout_collapseMode="pin" app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:transitionGroup="false" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <include layout="@layout/content_scrolling" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icn_add"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="end|bottom"
+        android:elevation="@dimen/button_elevation"/>
+    <!--android:background="@drawable/btn_background"-->
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,12 @@
+*a.out
+*.swo
+*.swp
+*.gch
+cigire
+results
+notes/*
+pos_gen
+**log
+**test
+**debug
+gitpushscript

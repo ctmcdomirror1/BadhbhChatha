@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.tea.cmcdona2.casper.Ents.EntsActivity"/>
+        <LinearLayout android:id="@+id/footer" android:layout_width="fill_parent"
+            android:layout_height="48dp" android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue"
+            android:layout_margin="0dp">
+
+            <Button android:id="@+id/MyButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="My Socs"
+                android:layout_margin="0dp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                />
+
+            <Button android:id="@+id/AllButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="All Socs"
+                android:layout_margin="0dp"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                />
+
+            <Button android:id="@+id/FavButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="Favs" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/mainContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:layout_alignParentStart="true">
+        </FrameLayout>
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/drawer_list"
+        android:entries="@array/societies"
+        android:divider="@null"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/white"
+        >
+    </ListView>
+
+
+</android.support.v4.widget.DrawerLayout>

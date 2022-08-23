@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="tick"
+        android:icon="@drawable/tick"
+        android:onClick="tickOnClick"
+        yourapp:showAsAction="always"
+        />
+</menu> 

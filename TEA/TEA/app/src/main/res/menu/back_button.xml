@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="tick"
+        android:icon="@drawable/ic_backspace_white_24dp"
+        android:id="@+id/button"
+        android:onClick="backPressed"
+        yourapp:showAsAction="always"
+        />
+</menu>

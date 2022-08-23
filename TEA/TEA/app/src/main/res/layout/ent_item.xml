@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="78dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/event_poster"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
+        />
+    <TextView
+        android:id="@+id/event_title"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_toRightOf="@+id/event_poster"
+        android:text="This is event name"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/event_timming"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="75dp"
+        android:layout_toRightOf="@+id/event_title"
+        android:lineSpacingExtra="7dp"
+        android:text="10/02
+19:15"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="20dp"
+        android:layout_below="@+id/event_poster">
+    </View>
+
+</RelativeLayout>
