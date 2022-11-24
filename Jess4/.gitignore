@@ -1,0 +1,5 @@
+*.swo
+*.swp
+*.gch
+filter_pawn/build/**
+Jess
