@@ -72,7 +72,7 @@ void process_positions_helper(position* p, pthread_mutex_t* onGen_lock)
     }
 
     uint64_t pawns[] = { p->sides[0].pawns, p->sides[1].pawns };
-    if (!FilterPawn(pawns, p->enpassant, pi.total_captured_base_pieces, pi.promotions) != 0)
+    if (!FilterPawn(pawns, p->enpassant, pi.total_captured_base_pieces, pi.promotions))
     {
         return;
     }
